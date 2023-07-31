@@ -55,12 +55,21 @@ public class MavablePoint extends Point {
 
     }
 
-    public void move(){
-        xSpeed += getX();
-        ySpeed += getY();
-        
+    public void move() {
+        float x = getX();
+        float y = getY();
+
+        x += xSpeed;
+        y += ySpeed;
+        this.setX(x);
+        this.setY(y);
 
 
+//        double[] res = new double[2];
+//        res[0] = x;
+//        res[1] = y;
+//        return res;
 
+      //  return new double[]{x,y};
     }
 }
